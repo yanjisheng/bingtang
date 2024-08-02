@@ -2,12 +2,13 @@ This game is only provided in Simplified Chinese.
 Github: https://github.com/yanjisheng/bingtang
 
 《回来吧冰糖》
+请点击右上角“Code”-“Download ZIP”下载游戏。
 本游戏同时有python版和vbscript版，两版本剧情分支完全相同。
 python版需要提前安装python3，支持windows、mac和linux操作系统，不支持python2。
 请到下面网址下载官方的python并安装：
 https://www.python.org/downloads/
 vbscript版仅支持简体中文windows操作系统，不支持其他操作系统。
-前往上面链接中的github仓库即可下载两种版本的最新游戏程序。
+前往上面链接中的github页面即可下载两种版本的最新游戏程序。
 
 操作说明（python）：按enter显示下一条，遇到选项输入A、B或C后（大小写均可）按enter。如需中途退出，点击右上角的“x”或者Ctrl+C。
 操作说明（vbscript）：点击“确定”显示下一条，遇到选项点击“是”（对应选项A）、“否”（对应选项B）或者“取消”（对应选项C）。如需中途退出，请右键任务栏或者Ctrl+Shift+Esc进入“任务管理器”，找到进程“Microsoft Windows Based Script Host”（wscript.exe），然后结束该任务。
