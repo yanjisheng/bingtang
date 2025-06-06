@@ -25,14 +25,19 @@ sub startgame()
     end if
     if q2 = vbno then
       msgbox "黑心巧克力：你知道的太多了！", vbokonly, "回来吧冰糖(1B2B)"
+      start_time = now
       q3 = msgbox("说着，她掏出一把水果刀，朝我的胸口捅去。"&vbcrlf&"3. A. 我被捅死了。 B. 我一把抓住她的手，把刀夺了下来。（本选项限时1秒）", vbyesno, "回来吧冰糖(1B2B)")
-      if q3 = vbyes then
+      end_time = now
+      'msgbox "反应时间"&second(end_time-start_time)&"秒", vbokonly, "test"
+      if (q3 = vbyes) or (second(end_time - start_time) > 1) then
+        msgbox "我还没有反应过来，她的水果刀就已经插进了我的胸膛。", vbokonly, "回来吧冰糖(1B2B3A)"
         msgbox "冰糖：我……我就是冰糖。你……你是怎么知道这些的？难道你是……糖果铺！"&vbcrlf&"我：（吐血）嗯。", vbokonly, "回来吧冰糖(1B2B3A)"
         msgbox "冰糖：（发抖）我……我竟然……亲手杀死了糖果铺！天呐……"&vbcrlf&"冰糖疯了。过了几分钟，她冷静了下来。", vbokonly, "回来吧冰糖(1B2B3A)"
         msgbox "冰糖：我可不能被警察抓走，要是被抓走了，不仅得判死刑，还要接受讯问，交代我的作案动机，说不定还会上新闻……反正活着也没意思，还不如死了算了。", vbokonly, "回来吧冰糖(1B2B3A)"
         msgbox "冰糖自言自语着，把刀拔了出来，插进了自己的胸口。", vbokonly, "回来吧冰糖(1B2B3A)"
         msgbox "达成结局：殉情", vbokonly, "回来吧冰糖(1B2B3A)"
       else
+        msgbox "说时迟那时快，还好我身手不凡，我一把抓住她的手，把刀夺了下来。", vbokonly, "回来吧冰糖(1B2B3B)"
         msgbox "我：哼，就你？（把刀架在冰糖的脖子上）冰糖你也太弱了吧，想暗算我，连刀都拿不稳，真是菜啊。", vbokonly, "回来吧冰糖(1B2B3B)"
         msgbox "冰糖：（颤抖）求求你了，别把这个秘密告诉别人好吗？我不想被身边的人发现我就是冰糖，我只想一个人安静地生活。真的，求求你了。", vbokonly, "回来吧冰糖(1B2B3B)"
         msgbox "我：我为什么要答应你？", vbokonly, "回来吧冰糖(1B2B3B)"

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import time
 
 def startgame():
   q1 = ""
@@ -63,10 +64,16 @@ def startgame():
     if q2 == "b" or q2 == "B":
       print("黑心巧克力：你知道的太多了！")
       input()
+      start_time = time.time()
       print("说着，她掏出一把水果刀，朝我的胸口捅去。\n3. A. 我被捅死了。 B. 我一把抓住她的手，把刀夺了下来。（本选项限时1秒）")
       while not(q3 == "a" or q3 == "A" or q3 == "b" or q3 == "B"):
         q3 = input("请回答：")
-      if q3 == "a" or q3 == "A":
+        end_time = time.time()
+      #print("反应时间"+str(end_time-start_time)+"秒")
+      #input()
+      if q3 == "a" or q3 == "A" or end_time - start_time > 1:
+        print("我还没有反应过来，她的水果刀就已经插进了我的胸膛。")
+        input()
         print("冰糖：我……我就是冰糖。你……你是怎么知道这些的？难道你是……糖果铺！\n我：（吐血）嗯。")
         input()
         print("冰糖：（发抖）我……我竟然……亲手杀死了糖果铺！天呐……\n冰糖疯了。过了几分钟，她冷静了下来。")
@@ -78,6 +85,8 @@ def startgame():
         print("达成结局：殉情")
         input()
       else:
+        print("说时迟那时快，还好我身手不凡，我一把抓住她的手，把刀夺了下来。")
+        input()
         print("我：哼，就你？（把刀架在冰糖的脖子上）冰糖你也太弱了吧，想暗算我，连刀都拿不稳，真是菜啊。")
         input()
         print("冰糖：（颤抖）求求你了，别把这个秘密告诉别人好吗？我不想被身边的人发现我就是冰糖，我只想一个人安静地生活。真的，求求你了。")
