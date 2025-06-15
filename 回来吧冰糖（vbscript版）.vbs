@@ -600,9 +600,10 @@ dim playername
 dim r
 dim e
 msgbox "回来吧冰糖"&vbcrlf&"本作品为纪念虚拟主播“冰糖IO”而创作。"&vbcrlf&"本作品的作者为“颜姬Channel”。", vbokonly, "回来吧冰糖"
-do while playername = ""
-  playername = inputbox("请输入玩家昵称：", "回来吧冰糖", "")
-loop
+playername = inputbox("请输入玩家昵称：", "回来吧冰糖", "")
+if playername = "" then
+  WScript.quit
+end if
 r = 1
 do
   startgame

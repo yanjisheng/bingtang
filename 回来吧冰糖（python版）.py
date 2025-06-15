@@ -1110,8 +1110,9 @@ r = 1
 e = ""
 print("回来吧冰糖\n本作品为纪念虚拟主播“冰糖IO”而创作。\n本作品的作者为“颜姬Channel”。")
 input()
-while playername == "":
-  playername = input("请输入玩家昵称：")
+playername = input("请输入玩家昵称：")
+if playername == "" :
+  exit()
 while not(e == "n" or e == "N"):
   startgame()
   e = ""
